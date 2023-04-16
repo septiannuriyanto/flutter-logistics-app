@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:logistics/ui/screens/inventory/global_cat_screen/global_cat_screen.dart';
+import 'package:dexter/ui/screens/inventory/global_cat_screen/global_cat_maintenance/global_cat_screen.dart';
+import 'package:dexter/ui/screens/inventory/invcontrol_screen/invcontrol_screen.dart';
 
+import '../ui/screens/inventory/global_cat_screen/global_cat_tabbed.dart';
 import 'model/incumbent_menu.dart';
 import 'model/submenu.dart';
 
@@ -22,11 +24,16 @@ List<IncumbentMenu> incumbentMenuList = [
     iconPath: 'lib/assets/icons/menu_tran.svg',
     submenu: [
       SubMenu(
-          menuIndex: 3,
-          title: "Global Catalogue",
-          route: "/invCatalogue",
-          child: const GlobalCatScreen()),
-      SubMenu(menuIndex: 4, title: "Inventory Control", route: "/invControl"),
+        menuIndex: 3,
+        title: "Global Catalogue",
+        route: "/invCatalogue",
+        child: GlobalCatTabbedScreen(),
+      ),
+      SubMenu(
+          menuIndex: 4,
+          title: "Inventory Control",
+          route: "/invControl",
+          child: InventoryControl()),
     ],
   ),
   //3. Purchasing

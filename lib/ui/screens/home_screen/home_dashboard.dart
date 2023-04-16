@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:logistics/assets/theme/color_constant.dart';
-import 'package:logistics/components/widgets/side_drawer/side_drawer.dart';
+import 'package:dexter/assets/theme/color_constant.dart';
+import 'package:dexter/components/widgets/side_drawer/side_drawer.dart';
 
 class HomeDashboard extends StatelessWidget {
   const HomeDashboard({super.key});

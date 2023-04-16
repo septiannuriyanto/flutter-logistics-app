@@ -1,10 +1,12 @@
 import 'package:get/get.dart';
-import 'package:logistics/assets/theme/color_constant.dart';
+import 'package:dexter/assets/theme/color_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:logistics/assets/theme/widget_functions.dart';
-import 'package:logistics/data/model/submenu.dart';
-import 'package:logistics/data/submenu_config.dart';
+import 'package:dexter/assets/theme/widget_functions.dart';
+import 'package:dexter/data/model/submenu.dart';
+import 'package:dexter/data/submenu_config.dart';
+import 'package:intl/intl.dart';
+import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 import '../main_container/main_container_controller.dart';
 
@@ -15,6 +17,9 @@ class SideDrawer extends GetView<MainContainerController> {
 
   @override
   final controller = Get.put(MainContainerController());
+
+  int jam = int.parse(DateFormat("HH").format(DateTime.now()));
+  String shiftNum = "";
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +34,10 @@ class SideDrawer extends GetView<MainContainerController> {
                 Column(
                   children: [
                     Image.asset(
-                      "lib/assets/logo/logo_icon.png",
-                      width: 30,
+                      "lib/assets/logo/export/logo_dark.png",
                       height: 30,
                     ),
                     vSpace(10),
-                    Text(
-                      "Advanced Supply Chain Management",
-                      textAlign: TextAlign.center,
-                      style: defaultTxtColor,
-                    )
                   ],
                 ),
               ],
@@ -146,6 +145,35 @@ class SideDrawer extends GetView<MainContainerController> {
               color: textColor,
             ),
           ),
+          ListTile(
+            leading: SizedBox(
+              width: 70,
+              height: 40,
+              child: LiteRollingSwitch(
+                width: 70,
+                textSize: 10,
+                value: jam > 7 && jam <= 18 ? true : false,
+                textOn: '',
+                textOff: '',
+                colorOn: Colors.blueAccent,
+                colorOff: Colors.black,
+                iconOn: Icons.wb_sunny,
+                iconOff: Icons.nightlight_outlined,
+                animationDuration: const Duration(milliseconds: 300),
+                onChanged: (bool state) {
+                  state == true ? shiftNum = '1' : shiftNum = '2';
+                },
+                onTap: () {},
+                onDoubleTap: () {},
+                onSwipe: () {},
+              ),
+            ),
+            title: Text(
+              "Dark Mode",
+              style: defaultTxtColor,
+            ),
+          ),
+
           DrawerTile(
             title: "Log out",
             svgSrc: "lib/assets/icons/exit.svg",

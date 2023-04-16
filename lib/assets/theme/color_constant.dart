@@ -31,6 +31,7 @@ class Palette {
 TextStyle defaultTxtColor = TextStyle(color: textColor);
 TextStyle defaultBold = const TextStyle(fontWeight: FontWeight.w800);
 TextStyle greyTxt = TextStyle(color: Colors.grey.shade400);
-
+Color focusColor = companySecondaryColor;
 
 //Button Themes
+Color defaultButtonColor = HexColor('3f8bd7');

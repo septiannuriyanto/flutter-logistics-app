@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:logistics/assets/theme/color_constant.dart';
-import 'package:logistics/assets/theme/size_constant.dart';
+import 'package:dexter/assets/theme/color_constant.dart';
+import 'package:dexter/assets/theme/size_constant.dart';
 
 class CustomSearch extends StatelessWidget {
   TextEditingController? textEditingController;

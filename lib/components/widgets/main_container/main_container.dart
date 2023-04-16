@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:logistics/assets/theme/color_constant.dart';
-import 'package:logistics/assets/theme/widget_functions.dart';
-import 'package:logistics/data/submenu_config.dart';
+import 'package:dexter/assets/theme/color_constant.dart';
+import 'package:dexter/assets/theme/widget_functions.dart';
+import 'package:dexter/data/submenu_config.dart';
 
 import 'main_container_controller.dart';
 

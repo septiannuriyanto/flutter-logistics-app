@@ -2,8 +2,8 @@ import 'package:get/get.dart';
 
 import '../../components/widgets/main_container/main_container.dart';
 import '../../components/widgets/main_container/main_container_binding.dart';
-import '../screens/inventory/global_cat_screen/global_cat_binding.dart';
-import '../screens/inventory/global_cat_screen/global_cat_screen.dart';
+import '../screens/inventory/global_cat_screen/global_cat_maintenance/global_cat_binding.dart';
+import '../screens/inventory/global_cat_screen/global_cat_maintenance/global_cat_screen.dart';
 
 part 'app_routes.dart';
 
@@ -19,7 +19,7 @@ class AppPages {
     // ),
     GetPage(
       name: _Paths.INV_CATALOGUE,
-      page: () => GlobalCatScreen(),
+      page: () => GlobalCatMaintenance(),
       binding: GlobalCatBinding(),
     ),
 

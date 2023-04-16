@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:logistics/assets/theme/size_constant.dart';
+import 'package:dexter/assets/theme/size_constant.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   ResponsiveLayout({

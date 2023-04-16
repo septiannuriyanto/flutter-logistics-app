@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:logistics/assets/theme/color_constant.dart';
+import 'package:dexter/assets/theme/color_constant.dart';
 
 import '../../../components/widgets/main_container/main_container.dart';
 import '../../../components/widgets/side_drawer/side_drawer.dart';

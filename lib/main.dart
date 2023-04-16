@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:logistics/ui/routes/app_pages.dart';
-import 'package:logistics/ui/screens/home_screen/desktop_scaffold.dart';
-import 'package:logistics/ui/screens/home_screen/home_dashboard.dart';
+import 'package:dexter/ui/routes/app_pages.dart';
+import 'package:dexter/ui/screens/home_screen/desktop_scaffold.dart';
+import 'package:dexter/ui/screens/home_screen/home_dashboard.dart';
 import 'package:get/get.dart';
-import 'package:logistics/ui/screens/home_screen/mobile_scaffold.dart';
-import 'package:logistics/ui/screens/home_screen/tablet_scaffold.dart';
-import 'package:logistics/ui/screens/responsive_layout.dart';
+import 'package:dexter/ui/screens/home_screen/mobile_scaffold.dart';
+import 'package:dexter/ui/screens/home_screen/tablet_scaffold.dart';
+import 'package:dexter/ui/screens/responsive_layout.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -19,11 +20,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Supply Chain Management',
-      theme: ThemeData(
-        fontFamily: 'Poppins',
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Dexter ERP',
+      theme: ThemeData.dark(),
+      // theme: ThemeData(
+      //   fontFamily: 'Poppins',
+      //   primarySwatch: Colors.blue,
+      // ),
       home: ResponsiveLayout(
         desktopScaffold: const DesktopScaffold(),
         tabletScaffold: const TabletScaffold(),

@@ -17,12 +17,4 @@ class EGIService {
     'PC-1250',
     'PC-2000'
   ];
-
-  static List<String> getSuggestions(String query) {
-    List<String> matches = <String>[];
-    matches.addAll(egi);
-
-    matches.retainWhere((s) => s.toLowerCase().contains(query.toLowerCase()));
-    return matches;
-  }
 }

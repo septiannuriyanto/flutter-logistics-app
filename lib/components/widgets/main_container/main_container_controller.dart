@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/state_manager.dart';
-import 'package:logistics/components/widgets/custom_widgets/custom_snackbar.dart';
+import 'package:dexter/components/widgets/custom_widgets/custom_snackbar.dart';
 
 class MainContainerController extends GetxController {
   final CarouselController carousel_c = CarouselController();

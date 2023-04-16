@@ -1,4 +1,4 @@
-import 'package:logistics/data/model/submenu.dart';
+import 'package:dexter/data/model/submenu.dart';
 
 class IncumbentMenu {
   String incumbentTitle;

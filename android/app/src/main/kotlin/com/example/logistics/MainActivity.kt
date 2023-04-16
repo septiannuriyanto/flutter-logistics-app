@@ -1,4 +1,4 @@
-package com.example.logistics
+package com.scalar.dexter
 
 import io.flutter.embedding.android.FlutterActivity
 
